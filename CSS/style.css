@@ -1,0 +1,134 @@
+/* Css reset */
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+/* Css reset */
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/* font */
+
+/* Media queries for container class */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1470px;
+  }
+}
+/* Media queries for container class */
+
+/*Root colors */
+:root {
+  --moderate-violet: rgb(114,64,201);
+  --grayish-blue: hsl(217, 19%, 35%);
+  --blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(0, 0%, 81%);
+  --grayish-blue: hsl(210, 46%, 95%);
+}
+/*Root colors */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 95%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "item1 item1 item2 item3"
+    "item4 item5 item5 item3";
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  padding: 19px;
+  border-radius: 10px;
+}
+.item1 {
+  grid-area: item1;
+  background-color: rgb(114,64,201);
+  
+
+  
+  /* align-items: center; */
+}
+.name :nth-child(1){
+  color: hsl(0, 0%, 91%);
+  /* font-family: 'Barlow Semi Condensed', sans-serif;
+   */
+   font-weight: 600;
+}
+.name :nth-child(2){
+  color: hsl(0, 0%, 70%);
+  font-weight: 500;
+  font-size: smaller;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+@media only screen and (max-width: 550px){
+  .container {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr .5fr .65fr .75fr;
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5";
+  }
+  
+}
+.profile{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.profile .name{
+  margin-left: 10px;
+}
+img{
+  border-radius: 50%;
+  transform: scale(.7);
+  margin-left: -10px;
+}
